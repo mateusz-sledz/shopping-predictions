@@ -1,0 +1,22 @@
+<form action="{{ url_for("gfg")}}" method="post"> 
+
+<head>
+<title>Shopex</title>
+</head>
+<h1>Sklep internetowy </h1>
+<b>Dział zwiększania sprzedaży</b>
+<br><br>
+<div align="left" width=15>
+Podaj odpowiednie metryki, na podstawie których zostanie wykonana predykcja zachowania klienta,<br>a następnie kliknij przycisk submit.<br><br>
+<textarea cols="120" rows="20" name="rows"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+
+<p>Predykcje: {{ predicted }}</p>
+
+
+<h2>Porównanie modeli</h2>
+<input type="submit" name="compare" value="Compare">
+<p>Random forest:              {{ precision1 }}</p>
+<p>Klasyfikator większościowy: {{ precision2 }}</p>
+<p>Różnica:                    {{ diff }}</p>
+
